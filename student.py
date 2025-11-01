@@ -7,10 +7,10 @@ import mysql.connector
 import cv2
 
 conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="face_recognizer"
+    host="",
+    user="",
+    password="",
+    database=""
 )
 
 
@@ -43,7 +43,7 @@ class Student:
 
 
         #first image
-        img=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img=Image.open(r"img1.jpeg")
         img=img.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage=ImageTk.PhotoImage(img)
 
@@ -51,7 +51,7 @@ class Student:
         f_labl.place(x=0,y=0,width=500,height=130)
 
         #sec image
-        img1=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img1=Image.open(r"img1.jpeg")
         img1=img1.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage1=ImageTk.PhotoImage(img1)
 
@@ -59,7 +59,7 @@ class Student:
         f_labl.place(x=500,y=0,width=500,height=130)
 
         #third image
-        img2=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img2=Image.open(r"img1.jpeg")
         img2=img2.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage2=ImageTk.PhotoImage(img2)
 
@@ -67,7 +67,7 @@ class Student:
         f_labl.place(x=1000,y=0,width=500,height=130)
 
          #backgroun image
-        img3=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\bg11.jpg")
+        img3=Image.open(r"bg11.jpg")
         img3=img3.resize((1530,710),Image.Resampling.LANCZOS)
         self.photoimage3=ImageTk.PhotoImage(img3)
 
@@ -312,7 +312,7 @@ class Student:
             messagebox.showerror("ERROR","All fields are required",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",user="root",password="root",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",user="root",password="",database="face_recognizer")
                 my_cursor=conn.cursor()
                 my_cursor.execute("INSERT INTO Student VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(self.var_dep.get(),self.var_course.get(),self.var_year.get(),self.var_semester.get(),self.var_std_id.get(),self.var_std_name.get(),self.var_div.get(),self.var_roll.get(),self.var_gender.get(),self.var_dob.get(),self.var_email.get(),self.var_phone.get(),self.var_address.get(),self.var_teacher.get(),self.var_radio1.get()))
                 conn.commit()
@@ -324,7 +324,7 @@ class Student:
     
      #==========Fetch Data===============
     def fetch_data(self):
-        conn=mysql.connector.connect(host="localhost",user="root",password="root",database="face_recognizer")
+        conn=mysql.connector.connect(host="localhost",user="root",password="",database="face_recognizer")
         my_cursor=conn.cursor()
         my_cursor.execute("SELECT * FROM Student")
         data = my_cursor.fetchall()
@@ -364,7 +364,7 @@ class Student:
             try:
                 Update=messagebox.askyesno("Update","Do you want to update this data", parent = self.root)
                 if Update>0:
-                    conn=mysql.connector.connect(host="localhost",user="root",password="root",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="",password="",database="face_recognizer")
                     my_cursor=conn.cursor()
                     my_cursor.execute("Update Student SET Department=%s,Course=%s, Year=%s , Semester=%s, Name=%s , Division=%s, RollNo=%s , Gender=%s , DOB=%s , Email=%s , Phone=%s , Address=%s , Teacher=%s , PhotoSample=%s where ID=%s",(self.var_dep.get(),self.var_course.get(),self.var_year.get(),self.var_semester.get(),self.var_std_name.get(),self.var_div.get(),self.var_roll.get(),self.var_gender.get(),self.var_dob.get(),self.var_email.get(),self.var_phone.get(),self.var_address.get(),self.var_teacher.get(),self.var_radio1.get(),self.var_std_id.get()))
                 else:
@@ -386,7 +386,7 @@ class Student:
             try:
                 delete=messagebox.askyesno("Student Delete Page","Do you want to delete this student?", parent=self.root)
                 if delete>0:
-                    conn=mysql.connector.connect(host="localhost",user="root",password="root",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="",password="",database="face_recognizer")
                     my_cursor=conn.cursor()
                     sql="DELETE FROM Student WHERE ID=%s"
                     val=(self.var_std_id.get(),)
@@ -426,7 +426,7 @@ class Student:
             messagebox.showerror("ERROR","All fields are required",parent=self.root)
         else:
             try:
-                conn=mysql.connector.connect(host="localhost",user="root",password="root",database="face_recognizer")
+                conn=mysql.connector.connect(host="localhost",user="",password="",database="face_recognizer")
                 my_cursor=conn.cursor()
                 my_cursor.execute('''SELECT * FROM Student''')
                 myresult = my_cursor.fetchall()
@@ -475,4 +475,5 @@ class Student:
 if __name__=="__main__":
     root=Tk()
     obj=Student(root)
+
     root.mainloop()
