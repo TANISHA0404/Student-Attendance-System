@@ -11,7 +11,7 @@ class face_recognition_system:
         self.root.title("Face Recognition System")
         
         #first image
-        img=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img=Image.open(r"face reconition system")
         img=img.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage=ImageTk.PhotoImage(img)
 
@@ -19,7 +19,7 @@ class face_recognition_system:
         f_labl.place(x=0,y=0,width=500,height=130)
 
         #sec image
-        img1=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img1=Image.open(r"")
         img1=img1.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage1=ImageTk.PhotoImage(img1)
 
@@ -27,7 +27,7 @@ class face_recognition_system:
         f_labl.place(x=500,y=0,width=500,height=130)
 
         #third image
-        img2=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img1.jpeg")
+        img2=Image.open(r"img1.jpeg")
         img2=img2.resize((500,130),Image.Resampling.LANCZOS)
         self.photoimage2=ImageTk.PhotoImage(img2)
 
@@ -35,7 +35,7 @@ class face_recognition_system:
         f_labl.place(x=1000,y=0,width=500,height=130)
 
          #backgroun image
-        img3=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\bg11.jpg")
+        img3=Image.open(r"bg11.jpg")
         img3=img3.resize((1530,710),Image.Resampling.LANCZOS)
         self.photoimage3=ImageTk.PhotoImage(img3)
 
@@ -46,7 +46,7 @@ class face_recognition_system:
         title_lbl.place(x=0,y=0,width=1530,height=45)
 
         #student button
-        img4=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\stuimg.jpeg")
+        img4=Image.open(r"stuimg.jpeg")
         img4=img4.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage4=ImageTk.PhotoImage(img4)
 
@@ -57,7 +57,7 @@ class face_recognition_system:
         b1_1.place(x=200,y=300,width=220,height=40)
 
         #detect face
-        img5=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\scan.webp")
+        img5=Image.open(r"\scan.webp")
         img5=img5.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage5=ImageTk.PhotoImage(img5)
 
@@ -68,7 +68,7 @@ class face_recognition_system:
         b1_1.place(x=500,y=300,width=220,height=40)
 
         #mark attendanec
-        img6=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\rec.jpg")
+        img6=Image.open(r"rec.jpg")
         img6=img6.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage6=ImageTk.PhotoImage(img6)
 
@@ -79,7 +79,7 @@ class face_recognition_system:
         b1_1.place(x=800,y=300,width=220,height=40)
 
         #help button
-        img7=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\helpimg.jpg")
+        img7=Image.open(r"helpimg.jpg")
         img7=img7.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage7=ImageTk.PhotoImage(img7)
 
@@ -90,7 +90,7 @@ class face_recognition_system:
         b1_1.place(x=1100,y=300,width=220,height=40)
 
         #train data
-        img8=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\img2.webp")
+        img8=Image.open(r"img2.webp")
         img8=img8.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage8=ImageTk.PhotoImage(img8)
 
@@ -101,7 +101,7 @@ class face_recognition_system:
         b1_1.place(x=200,y=600,width=220,height=40)
 
         #phtots
-        img9=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\ph.jpeg")
+        img9=Image.open(r"ph.jpeg")
         img9=img9.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage9=ImageTk.PhotoImage(img9)
 
@@ -113,7 +113,7 @@ class face_recognition_system:
         
         
         #developer
-        img10=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\dev.webp")
+        img10=Image.open(r"dev.webp")
         img10=img10.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage10=ImageTk.PhotoImage(img10)
 
@@ -124,7 +124,7 @@ class face_recognition_system:
         b1_1.place(x=800,y=600,width=220,height=40)
         
         #exit
-        img11=Image.open(r"C:\Users\goyal\Desktop\fase_recognition system\images for\exitimg.png")
+        img11=Image.open(r"exitimg.png")
         img11=img11.resize((220,220),Image.Resampling.LANCZOS)
         self.photoimage11=ImageTk.PhotoImage(img11)
 
@@ -148,3 +148,4 @@ if __name__=="__main__":
     root=Tk()
     obj=face_recognition_system(root)
     root.mainloop()
+
