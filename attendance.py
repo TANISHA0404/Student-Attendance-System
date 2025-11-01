@@ -29,7 +29,7 @@ class Attendance:
         self.var_atten_attendance=StringVar()
         
         
-        img = Image.open(r"C:\Users\Dell\Desktop\FR SYSTEM\Images\black.jpg")
+        img = Image.open(r"black.jpg")
         img = img.resize((1366,128),Image.ANTIALIAS) #resize and converting high level img to low level img.
         self.photoimg = ImageTk.PhotoImage(img)
 
@@ -40,7 +40,7 @@ class Attendance:
         title_lbl.place(x=25,y=25,width = 1300,height = 90)
         
         #bg image.
-        img2 = Image.open(r"C:\Users\Dell\Desktop\FR SYSTEM\Images\black.jpg")
+        img2 = Image.open(r"black.jpg")
         img2 = img2.resize((1366,640),Image.ANTIALIAS) #resize and converting high level img to low level img.
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
@@ -55,7 +55,7 @@ class Attendance:
         left_frame = LabelFrame(main_frame, bd=2, relief=RIDGE,text="Student Attendance Details",cursor="hand2",font=("times new roman", 12, "bold"),bg="white",fg="red")
         left_frame.place(x=10,y=10,width=630,height = 540)
 
-        img_left = Image.open(r"C:\Users\Dell\Desktop\FR SYSTEM\Images\Attendance1.jpg")
+        img_left = Image.open(r"Attendance1.jpg")
         img_left = img_left.resize((540,80),Image.ANTIALIAS) #resize and converting high level img to low level img.
         self.photoimg_left = ImageTk.PhotoImage(img_left)
         f_lbl = Label(left_frame,image =self.photoimg_left,cursor="hand2")
@@ -272,4 +272,5 @@ class Attendance:
 if __name__=="__main__":
     root=Tk()
     obj = Attendance(root)
+
     root.mainloop()
